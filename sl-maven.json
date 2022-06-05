@@ -1,0 +1,23 @@
+{
+    "tokenFile": "sealights/sltoken-dev-cs.txt",
+    "createBuildSessionId": true,
+    "appName": "Calculator-Maven-DD",
+    "branchName": "main",
+    "buildName": "SL_Timestamp",
+    "packagesIncluded": "*io.sealights.samples.maven.java*",
+    "packagesExcluded": "",
+    "filesIncluded": "*.class",
+    "filesExcluded": "*test-classes*",
+    "recursive": true,
+    "includeResources": true,
+    "testStage": "Unit Tests",
+    "labId": null,
+    "executionType": "full",
+    "logEnabled": false,
+    "logDestination": "console",
+    "logLevel": "warn",
+    "logFolder": "/tmp",
+    "sealightsJvmParams": {}, 
+    "enabled": true, 
+    "filesStorage": "/tmp"
+  }
