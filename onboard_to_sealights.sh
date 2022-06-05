@@ -32,7 +32,6 @@ java -jar sealights/sl-test-listener.jar start \
     -testStage "Manual Tests"
 #
 # Start the app with the test listener attached as a java agent
-# java -cp app/build/libs/app.jar calculator.App
 #
 java -cp target/calculator_mvn-1.0-SNAPSHOT.jar \
     -javaagent:sealights/sl-test-listener.jar \
