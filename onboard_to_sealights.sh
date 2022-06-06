@@ -8,8 +8,7 @@ mkdir sealights && cd sealights
 wget -nv https://agents.sealights.co/sealights-java/sealights-java-latest.zip
 unzip -oq sealights-java-latest.zip
 
-# Add SeaLights dependencies to the pom.xml file, and
-# create the SeaLights build session
+# Add SeaLights dependencies to the pom.xml file.
 java -jar sealights/sl-build-scanner.jar -pom \
     -configfile sl-maven.json \
     -workspacepath .
@@ -17,7 +16,9 @@ java -jar sealights/sl-build-scanner.jar -pom \
 # Build and run unit tests
 #
 # Because SeaLights was dynamically added to the pom.xml, 
-# this command can be run "as usual".
+# this command can be run "as usual". The SL build session
+# will be created, build metatada uploaded, and unit tests
+# dynamically instrumented for test coverage.
 mvn clean package
 
 # Restore the pom.xml
