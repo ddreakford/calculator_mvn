@@ -8,7 +8,7 @@ public class ArithmeticHandler {
         Double result;
         switch (operator) {
             case "+":
-              result = number1 + number2;
+              result = add(number1, number2);
               System.out.println(number1 + " + " + number2 + " = " + result);
               break;
       
@@ -32,5 +32,9 @@ public class ArithmeticHandler {
               throw new IllegalArgumentException("Invalid operator: " + operator);
           }
           return result;
+    }
+
+    private double add(double arg1, double arg2) {
+      return arg1 + arg2;
     }
 }
