@@ -40,7 +40,8 @@ java -cp target/calculator_mvn-1.0-SNAPSHOT.jar \
     -Dsl.buildSessionIdFile=buildSessionId.txt \
     -Dsl.tags="Calculator-Terminal-Maven" \
     -Dsl.testStage="Manual Tests" \
-    -Dsl.filesStorage=sealights \
+#    -Dsl.filesStorage=sealights/ \
+    -Dsl.log.toFile=true -Dsl.log.folder=sealights -Dsl.log.level=info \
     io.sealights.samples.maven.java.App
 
 #
