@@ -4,9 +4,11 @@
 # Download the SeaLights Java agent
 cd $PROJECT_ROOT_DIR
 rm -rf sealights
-mkdir sealights && cd sealights
+mkdir sealights
 wget -nv https://agents.sealights.co/sealights-java/sealights-java-latest.zip
-unzip -oq sealights-java-latest.zip
+unzip -o -d sealights sealights-java-latest.zip
+cp $AGENT_TOKEN_FILE sealights/
+rm sealights-java-latest.zip
 
 # Add SeaLights dependencies to the pom.xml file.
 java -jar sealights/sl-build-scanner.jar -pom \
@@ -34,15 +36,14 @@ java -jar sealights/sl-test-listener.jar start \
 #
 # Start the app with the test listener attached as a java agent
 #
-java -cp target/calculator_mvn-1.0-SNAPSHOT.jar \
+java -jar target/calculator_mvn-1.0-SNAPSHOT.jar \
     -javaagent:sealights/sl-test-listener.jar \
     -Dsl.tokenFile=sealights/sltoken-dev-cs.txt \
     -Dsl.buildSessionIdFile=buildSessionId.txt \
     -Dsl.tags="Calculator-Terminal-Maven" \
     -Dsl.testStage="Manual Tests" \
-#    -Dsl.filesStorage=sealights/ \
-    -Dsl.log.toFile=true -Dsl.log.folder=sealights -Dsl.log.level=info \
-    io.sealights.samples.maven.java.App
+    -Dsl.filesStorage=sealights/ \
+    -Dsl.log.toFile=true -Dsl.log.folder=sealights -Dsl.log.level=info
 
 #
 # End the test stage
