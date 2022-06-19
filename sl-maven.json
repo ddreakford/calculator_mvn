@@ -4,7 +4,7 @@
     "appName": "Calculator-Maven-DD",
     "branchName": "main",
     "buildName": "SL_Timestamp",
-    "packagesIncluded": "*io.sealights.samples.maven.java*",
+    "packagesIncluded": "*com.slsamples.maven.calculator*",
     "packagesExcluded": "",
     "filesIncluded": "*.class",
     "filesExcluded": "*test-classes*",
