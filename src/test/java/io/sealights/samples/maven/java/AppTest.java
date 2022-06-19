@@ -5,6 +5,10 @@ package io.sealights.samples.maven.java;
 
 import org.junit.Test;
 
+import com.slsamples.maven.calculator.App;
+import com.slsamples.maven.calculator.ArithmeticHandler;
+import com.slsamples.maven.calculator.MenuHandler;
+
 import static org.junit.Assert.*;
 
 import java.io.InputStream;

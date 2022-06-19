@@ -5,7 +5,7 @@
  * and adds modularization and some extensions like choice of input stream
  * to facilite demonstration of test effectiveness and other quality analytics.
  */
-package io.sealights.samples.maven.java;
+package com.slsamples.maven.calculator;
 
 import java.io.IOException;
 import java.io.InputStream;

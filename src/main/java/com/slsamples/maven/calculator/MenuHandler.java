@@ -1,4 +1,4 @@
-package io.sealights.samples.maven.java;
+package com.slsamples.maven.calculator;
 
 import java.io.InputStream;
 import java.util.Scanner;

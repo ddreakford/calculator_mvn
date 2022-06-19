@@ -1,4 +1,4 @@
-package io.sealights.samples.maven.java;
+package com.slsamples.maven.calculator;
 
 public class StatisticsHandler {
     
