@@ -15,13 +15,13 @@ java -jar sealights/sl-build-scanner.jar -pom \
     -configfile sl-maven.json \
     -workspacepath .
 
-# Build and run unit tests
+# Build and run [unit and integration] tests
 #
 # Because SeaLights was dynamically added to the pom.xml, 
 # this command can be run "as usual". The SL build session
-# will be created, build metatada uploaded, and unit tests
-# dynamically instrumented for test coverage.
-mvn clean package
+# will be created, build metatada uploaded, and unit and
+# integration tests dynamically instrumented for test coverage.
+mvn clean verify
 
 # Restore the pom.xml
 java -jar sealights/sl-build-scanner.jar -restorePom -workspacepath .
