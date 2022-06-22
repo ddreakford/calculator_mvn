@@ -13,17 +13,17 @@ public class ArithmeticHandler {
               break;
       
             case "-":
-              result = number1 - number2;
+              result = subtract(number1, number2);
               System.out.println(number1 + " - " + number2 + " = " + result);
               break;
       
             case "*":
-              result = number1 * number2;
+              result = multiply(number1, number2);
               System.out.println(number1 + " * " + number2 + " = " + result);
               break;
       
             case "/":
-              result = number1 / number2;
+              result = divide(number1, number2);
               System.out.println(number1 + " / " + number2 + " = " + result);
               break;
       
@@ -36,5 +36,17 @@ public class ArithmeticHandler {
 
     private double add(double arg1, double arg2) {
       return arg1 + arg2;
+    }
+
+    private double subtract(double arg1, double arg2) {
+      return arg1 - arg2;
+    }
+
+    private double multiply(double arg1, double arg2) {
+      return arg1 * arg2;
+    }
+  
+    private double divide(double arg1, double arg2) {
+      return arg1 / arg2;
     }
 }
