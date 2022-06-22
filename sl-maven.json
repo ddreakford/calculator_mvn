@@ -10,7 +10,6 @@
     "filesExcluded": "*test-classes*",
     "recursive": true,
     "includeResources": true,
-    "testStage": "Unit Tests",
     "labId": null,
     "executionType": "full",
     "logEnabled": false,
@@ -19,5 +18,6 @@
     "logFolder": "/tmp",
     "sealightsJvmParams": {}, 
     "enabled": true, 
-    "filesStorage": "/tmp"
+    "filesStorage": "/tmp",
+    "failsafeArgLine": "@{sealightsArgLine} -Dsl.testStage=\"Integration Tests\""
   }
